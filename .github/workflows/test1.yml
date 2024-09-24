@@ -42,7 +42,7 @@ jobs:
     - name: Set up Node.js environment
       uses: actions/setup-node@v4.0.3
       with:
-        node-version: lastest
+        node-version: '16'
     
     - name: PHP
       uses: shivammathur/setup-php@v2
