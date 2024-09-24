@@ -62,5 +62,5 @@ jobs:
       run: php --version
 
     - name: ls2
-      users: ./.github/actions/my-action
+      uses: ./.github/actions/my-action
 
