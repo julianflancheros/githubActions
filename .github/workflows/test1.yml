@@ -2,6 +2,11 @@ name: Hola Mundo
 
 on: [push]
 
+input:
+  message: "The message to print"
+  required: true
+  default: "Hello World"
+
 jobs:
   hola:
     runs-on: ubuntu-latest
