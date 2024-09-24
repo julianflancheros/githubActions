@@ -2,10 +2,6 @@ name: Hola Mundo
 
 on: [push]
 
-inputs:
-  message: "The message to print"
-  required: true
-  default: "Hello World"
 
 jobs:
   hola:

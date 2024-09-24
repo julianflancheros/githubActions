@@ -2,6 +2,11 @@ name: "My Action"
 
 description: "My first action"
 
+inputs:
+  message: "The message to print"
+  required: true
+  default: "Hello World"
+
 runs:
   using: "composite"
 
