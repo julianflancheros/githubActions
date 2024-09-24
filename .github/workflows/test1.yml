@@ -2,7 +2,7 @@ name: Hola Mundo
 
 on: [push]
 
-input:
+inputs:
   message: "The message to print"
   required: true
   default: "Hello World"
