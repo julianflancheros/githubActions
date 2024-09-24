@@ -64,7 +64,7 @@ jobs:
 
     - name: ls2
       uses: ./.github/workflows/actions/my-action
-        with:
-          message: "Fernando"
+      with:
+        message: "Fernando"
 
 
