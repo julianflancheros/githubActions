@@ -3,15 +3,16 @@ name: main-testbuild
 on: [push]
 
 jobs: 
-  runs-on: ubuntu-latest
+  say-hello:
+    runs-on: ubuntu-latest
+    
+    env:
+      MY_VAR: "Mi variable de entorno"
 
-  env:
-    MY_VAR: "Mi variable de entorno"
+    steps: 
+      - name: Checkout
+        uses: actions/checkout@v2
 
-  steps: 
-    - name: Checkout
-      uses: actions/checkout@v2
-
-    - name: Test
-      run: echo "Valor $MY_VAR"
+      - name: Test
+        run: echo "Valor $MY_VAR"
 
