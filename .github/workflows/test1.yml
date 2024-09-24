@@ -17,13 +17,15 @@ jobs:
       run: echo "Hola Mundo" > hola.txt
 
     - name: Read file 
-      run: cat hola.txt
-    
-
+      run: cat hola.txt  
 
   other:
     runs-on: ubuntu-latest
 
     steps:
+    - name: Checkout
+      uses: actions/checkout@v2
     - name: ls
-      run: ls -al
+      run: |
+        chomod +x script.sh
+        ./script.sh
