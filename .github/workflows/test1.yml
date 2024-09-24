@@ -41,6 +41,20 @@ jobs:
     
     - name: Set up Node.js environment
       uses: actions/setup-node@v4.0.3
+      with:
+        node-version: lastest
     
+    - name: PHP
+      uses: shivammathur/setup-php@v2
+      with:
+        php-version: '7.4'
+        extensions: mbstring, intl, zip, pcntl, exif, gd, pdo, mysql, sqlite, pgsql, bcmath, soap, xsl, xmlrpc, ldap, imap, tidy, gmp, opcache, apcu, memcached, redis, imagick, zmq, solr, amqp, ssh2, mongodb, igbinary, msgpack, yaml, xdebug, swoole, grpc, protobuf, event, rdkafka, inotify, smbclient, smbclient, sockets, sodium, yaml, xdebug, swoole, grpc, protobuf, event, rdkafka, inotify, smbclient, smbclient, sockets, sodium
+        coverage: xdebug
+        ini-values: post_max_size=256M, short_open_tag=On
+        pecl: true
+        composer: true
+        composer-token: ${{ secrets.COMPOSER_TOKEN }}
+
     - name: node versions
       run: node -v
+
