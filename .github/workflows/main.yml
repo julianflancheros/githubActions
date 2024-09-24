@@ -14,5 +14,5 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Test
-        run: echo "Valor ${{ vars.ENV.MY_VARIABLE_2 }}"
+        run: echo "Valor ${{ vars.MY_VARIABLE_2 }}"
 
