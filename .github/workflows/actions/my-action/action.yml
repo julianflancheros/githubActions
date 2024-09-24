@@ -13,7 +13,7 @@ runs:
 
   steps:
     - name: Hola Mundo 
-      run: echo "Hola Mundo"
+      run: echo "${{ inputs.message }}"
       shell: bash
 
     - name: touch file
@@ -21,7 +21,7 @@ runs:
       shell: bash
     
     - name: Set text
-      run: echo "Hola Mundo" > hola.txt
+      run: echo "${{ inputs.message }}" > hola.txt
       shell: bash
 
     - name: Read file 
