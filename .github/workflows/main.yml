@@ -5,11 +5,11 @@ on: [push]
 jobs: 
   test-build:
     runs-on: ubuntu-latest
-    
+
     steps:
       - name: Checkout
         uses: actions/checkout@v2
       - name: ls
         run: |
-          chmon +x script.sh
+          chmod +x script.sh
           ./script.sh
