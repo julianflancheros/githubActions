@@ -8,12 +8,16 @@ runs:
   steps:
     - name: Hola Mundo 
       run: echo "Hola Mundo"
+      shell: bash
 
     - name: touch file
       run: touch hola.txt
+      shell: bash
     
     - name: Set text
       run: echo "Hola Mundo" > hola.txt
+      shell: bash
 
     - name: Read file 
       run: cat hola.txt
+      shell: bash
